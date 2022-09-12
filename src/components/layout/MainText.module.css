@@ -1,0 +1,27 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 45%;
+}
+
+.text h1 {
+  font-size: 3rem;
+  color: hsl(220, 13%, 13%);
+  font-weight: 700;
+}
+
+.oranged {
+  font-size: 0.8rem;
+  color: hsl(26, 100%, 55%);
+  text-transform: uppercase;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+}
+
+.texting {
+  font-size: 1rem;
+  color: hsl(219, 9%, 45%);
+  line-height: 1.5rem;
+}

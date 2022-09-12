@@ -1,0 +1,73 @@
+.cartDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.amounts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.amount {
+  display: flex;
+  gap: 1rem;
+  font-weight: 400;
+
+  align-items: center;
+}
+
+.amount h3 {
+  font-size: 1.5rem;
+  color: hsl(220, 13%, 13%);
+}
+
+.amount p {
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  font-weight: 700;
+}
+
+.discount {
+  color: hsl(220, 14%, 75%);
+  font-size: 0.9rem;
+  /* google how to strike through  */
+}
+
+.btnComp {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  outline: none;
+  color: hsl(220, 13%, 13%);
+  background-color: hsl(223, 64%, 98%);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+}
+.btn span {
+  color: hsl(26, 100%, 55%);
+}
+
+.cartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  padding: 0.2rem 3rem;
+  border-radius: 0.3rem;
+  width: 100%;
+}
