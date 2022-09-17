@@ -4,8 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 7rem;
-  border-bottom: 0.2rem solid hsl(223, 64%, 98%);
+  border-bottom: 0.1rem solid hsla(217, 9%, 45%, 0.178);
 }
 
 .nav {
@@ -28,4 +27,10 @@
   color: hsl(219, 9%, 45%);
   cursor: pointer;
   font-weight: 400;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.link li:hover {
+  border-bottom: 2px solid hsl(26, 100%, 55%);
 }

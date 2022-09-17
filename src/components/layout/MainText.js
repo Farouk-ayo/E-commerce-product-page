@@ -1,7 +1,7 @@
 import CartButton from "../cart/CartButton";
 import classes from "./MainText.module.css";
 
-const MainText = () => {
+const MainText = (props) => {
   return (
     <div className={classes.text}>
       <p className={classes.oranged}>sneaker company</p>
