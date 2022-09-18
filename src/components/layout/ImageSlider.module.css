@@ -23,7 +23,8 @@
   border-radius: 0.5rem;
 }
 
-.img:hover {
+.smallImages img:hover {
   border: none;
-  outline: 0.1rem solid hsl(26, 100%, 55%);
+  outline: 0.15rem solid hsl(26, 100%, 55%);
+  filter: brightness(120%);
 }

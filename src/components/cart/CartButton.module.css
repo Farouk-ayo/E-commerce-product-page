@@ -44,10 +44,10 @@
 
 .btn {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
   outline: none;
   color: hsl(220, 13%, 13%);
   background-color: hsl(223, 64%, 98%);
@@ -55,7 +55,14 @@
   font-size: 1.2rem;
   border-radius: 0.3rem;
 }
+.minus {
+  padding: 0rem 1.5rem;
+}
+.plus {
+  padding: 0rem 1.5rem;
+}
 .btn span {
+  font-size: 1.7rem;
   color: hsl(26, 100%, 55%);
 }
 

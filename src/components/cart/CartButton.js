@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import classes from "./CartButton.module.css";
 import cartImage from "../../assets/images/icon-cartWhite.svg";
 
-const [number, setNumber] = useState();
-const subtractHandler = () => {
-  setNumber();
-};
+//adding button and subtract button in react
 
 const CartButton = (props) => {
+  const [number, setNumber] = useState(0);
+
+  const addHandler = () => {
+    setNumber(number + 1);
+  };
+
+  const subtractHandler = () => {
+    if (number <= 0) {
+      setNumber(0);
+    } else {
+      setNumber(number - 1);
+    }
+  };
+
   return (
     <div className={classes.cartDetails}>
       <div className={classes.amounts}>
@@ -22,7 +33,7 @@ const CartButton = (props) => {
           <span className={classes.minus} onClick={subtractHandler}>
             -
           </span>
-          0
+          {number}
           <span className={classes.plus} onClick={addHandler}>
             +
           </span>
