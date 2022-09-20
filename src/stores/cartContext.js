@@ -8,8 +8,7 @@ const cartContext = React.createContext({
   price: [],
   empty: null,
   discount: [],
-  calPrice: () => {},
-  deleteCart: () => {},
+  totalPrice: [],
 });
 
 export default cartContext;

@@ -10,6 +10,7 @@ import CartItems from "./cartItems";
 const Cart = (props) => {
   const cartCtx = useContext(cartContext);
   console.log(cartCtx);
+
   return (
     <section className={classes.cart}>
       <h1>Carts</h1>
@@ -23,8 +24,9 @@ const Cart = (props) => {
           text={cartCtx.title}
           price={cartCtx.price}
           num={cartCtx.num}
-          totalPrice={cartCtx.calPrice}
-          delete={cartCtx.deleteCart}
+          totalPrice={cartCtx.totalPrice}
+          onClicked={props.deleteCarts}
+          onClosed={props.onClosed}
         />
       )}
     </section>

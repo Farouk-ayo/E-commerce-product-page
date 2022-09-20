@@ -17,3 +17,14 @@
   border: none;
   outline: 0.15rem solid hsl(26, 100%, 55%);
 }
+
+.fig {
+  position: absolute;
+  border-radius: 50%;
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  font-size: 1rem;
+  top: 1.2rem;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+}

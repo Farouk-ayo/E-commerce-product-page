@@ -1,10 +1,12 @@
 import cartImage from "../../assets/images/icon-cart.svg";
 import avatar from "../../assets/images/image-avatar.png";
 import classes from "./CartLabel.module.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Cart from "./cart";
+import cartContext from "../../stores/cartContext";
 
 const CartLabel = (props) => {
+  const cartCtx = useContext(cartContext);
   const [carts, openCarts] = useState(false);
 
   const showForm = () => {
@@ -14,14 +16,31 @@ const CartLabel = (props) => {
       openCarts(false);
     }
   };
+  const deleteCart = () => {
+    cartCtx.empty = null;
+    console.log(cartCtx.empty);
+    openCarts(false);
+  };
+  const closed = () => {
+    openCarts(false);
+  };
 
+  console.log(cartCtx.empty);
   return (
     <React.Fragment>
       <div className={classes.carts}>
-        <img src={cartImage} onClick={showForm} alt="cart" />
+        <div>
+          <img src={cartImage} onClick={showForm} alt="cart" />
+          {cartCtx.empty ? (
+            <figcaption className={classes.fig}>{cartCtx.num}</figcaption>
+          ) : (
+            ""
+          )}
+        </div>
+
         <img className={classes.img} src={avatar} alt="" />
       </div>
-      {carts && <Cart />}
+      {carts && <Cart deleteCarts={deleteCart} onClosed={closed} />}
     </React.Fragment>
   );
 };

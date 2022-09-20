@@ -5,6 +5,8 @@ import delImg from "../../assets/images/icon-delete.svg";
 
 const CartItems = (props) => {
   const cartCtx = useContext(cartContext);
+
+ 
   return (
     <div className={classes.CartItems}>
       <li className={classes.cartList}>
@@ -19,12 +21,17 @@ const CartItems = (props) => {
                 {props.price} x {props.num}
               </p>
             )}
-            <h6 className={classes.totalPrice}>{props.totalPrice}</h6>
+            <h6 className={classes.totalPrice}>${props.totalPrice}</h6>
           </div>
         </div>
-        <img className={classes.delete} src={delImg} alt="" />
+        <img
+          className={classes.delete}
+          src={delImg}
+          onClick={props.onClicked}
+          alt=""
+        />
       </li>
-      <button className={classes.checkoutBtn}>Checkout</button>
+      <button className={classes.checkoutBtn}    onClick={props.onClosed}>Checkout</button>
     </div>
   );
 };

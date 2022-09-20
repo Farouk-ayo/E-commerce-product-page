@@ -5,11 +5,6 @@ import { useContext } from "react";
 import React from "react";
 import cartContext from "../../stores/cartContext";
 
-import ImgThumb1 from "../../assets/images/image-product-1-thumbnail.jpg";
-import ImgThumb2 from "../../assets/images/image-product-2-thumbnail.jpg";
-import ImgThumb3 from "../../assets/images/image-product-3-thumbnail.jpg";
-import ImgThumb4 from "../../assets/images/image-product-4-thumbnail.jpg";
-
 const Main = (props) => {
   const headerText = "Fall Limited Edition Sneakers";
 
@@ -17,6 +12,7 @@ const Main = (props) => {
 
   const datas = {
     price: "$125.00",
+    priceAmount: 125.0,
     discount: "$250.00",
     headerText: headerText,
   };
@@ -30,11 +26,10 @@ const Main = (props) => {
     cartctx.price = datas.price;
     cartctx.discount = datas.discount;
     cartctx.num = number;
-    cartctx.calPrice = (number) => {
-      return +number * +datas.price;
-      // console.log(+number * +datas.price);
-    };
+
+    cartctx.totalPrice = +number * datas.priceAmount;
     cartctx.title = datas.headerText;
+
     cartctx.empty = "yes";
 
     console.log(cartctx);
