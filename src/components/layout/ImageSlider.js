@@ -37,7 +37,7 @@ const imagesItems = [
   },
 ];
 
-const ImageSlider = () => {
+const ImageSlider = (props) => {
   const [theImg, setTheImg] = useState(1);
 
   const chosenImage1 = () => {
@@ -52,11 +52,13 @@ const ImageSlider = () => {
   const chosenImage4 = () => {
     setTheImg(imagesItems[3].id);
   };
+
   return (
     <div className={classes.imgComponent}>
       {imagesItems.map(({ id, key, smallImg, largeImg }) => {
         return (
           <React.Fragment>
+            {+theImg === +id ? props.eachNumber(smallImg, key) : null}
             {+theImg === +id ? (
               <img className={classes.big} src={largeImg} alt="" />
             ) : null}

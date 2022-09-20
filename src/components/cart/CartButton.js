@@ -19,14 +19,20 @@ const CartButton = (props) => {
     }
   };
 
+  const onSummit = (event) => {
+    event.preventDefault();
+
+    props.onClicked(number);
+  };
+
   return (
     <div className={classes.cartDetails}>
       <div className={classes.amounts}>
         <div className={classes.amount}>
-          <h3> $125.00</h3>
+          <h3>{props.price}</h3>
           <p>50%</p>
         </div>
-        <p className={classes.discount}>$250.00</p>
+        <p className={classes.discount}>{props.discount}</p>
       </div>
       <div className={classes.btnComp}>
         <button className={classes.btn}>
@@ -38,7 +44,7 @@ const CartButton = (props) => {
             +
           </span>
         </button>
-        <button className={classes.cartBtn} onClick={props.onClicked}>
+        <button className={classes.cartBtn} onClick={onSummit}>
           <img src={cartImage} alt="" />
           Add to cart
         </button>
