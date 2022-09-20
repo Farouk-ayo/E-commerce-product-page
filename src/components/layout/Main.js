@@ -31,6 +31,7 @@ const Main = (props) => {
     cartctx.title = datas.headerText;
 
     cartctx.empty = "yes";
+    cartctx.spans = "yep";
 
     console.log(cartctx);
   };

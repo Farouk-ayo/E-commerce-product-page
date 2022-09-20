@@ -7,6 +7,7 @@ const cartContext = React.createContext({
   img: [],
   price: [],
   empty: null,
+  spans:null,
   discount: [],
   totalPrice: [],
 });

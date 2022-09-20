@@ -15,7 +15,7 @@ const Header = () => {
   );
 
   return (
-    <header className={classes.header}>
+    <header className={classes.header} >
       <div className={classes.nav}>
         <img src={logo} alt="" />
         {eachItems}

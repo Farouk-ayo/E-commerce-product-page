@@ -31,7 +31,7 @@ const CartLabel = (props) => {
       <div className={classes.carts}>
         <div>
           <img src={cartImage} onClick={showForm} alt="cart" />
-          {cartCtx.empty ? (
+          {cartCtx.spans ? (
             <figcaption className={classes.fig}>{cartCtx.num}</figcaption>
           ) : (
             ""
