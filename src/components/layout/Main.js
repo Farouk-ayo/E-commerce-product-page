@@ -23,6 +23,7 @@ const Main = (props) => {
     cartctx.id = key;
     console.log(img, key);
   };
+  
 
   const onAddtoCart = (number) => {
     cartctx.price = datas.price;
@@ -34,9 +35,10 @@ const Main = (props) => {
 
     cartctx.empty = "yes";
 
+ 
     console.log(cartctx);
   };
-
+  console.log(cartctx);
   const [nav, setState] = useState("no");
   const setNav = () => {
     setState("yes");

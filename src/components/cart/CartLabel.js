@@ -30,6 +30,7 @@ const CartLabel = (props) => {
       <div className={classes.carts}>
         <div>
           <img src={cartImage} onClick={showForm} alt="cart" />
+         
         </div>
 
         <img className={classes.img} src={avatar} alt="" />

@@ -12,6 +12,8 @@ const Cart = (props) => {
   console.log(cartCtx);
 
   return (
+
+    
     <section className={classes.cart}>
       <h1>Carts</h1>
       {cartCtx.num === +0 || cartCtx.empty === null ? (

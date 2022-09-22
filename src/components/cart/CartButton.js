@@ -22,7 +22,6 @@ const CartButton = (props) => {
   const onSummit = (event) => {
     event.preventDefault();
 
- 
     props.onClicked(number);
   };
 
