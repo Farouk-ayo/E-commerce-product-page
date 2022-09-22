@@ -6,6 +6,8 @@ import ImgActive1 from "../../assets/images/image-product-1.jpg";
 import ImgActive2 from "../../assets/images/image-product-2.jpg";
 import ImgActive3 from "../../assets/images/image-product-3.jpg";
 import ImgActive4 from "../../assets/images/image-product-4.jpg";
+import right from "../../assets/images/icon-next.svg";
+import left from "../../assets/images/icon-previous.svg";
 import classes from "./ImageSlider.module.css";
 import { useState } from "react";
 import React from "react";
@@ -53,6 +55,19 @@ const ImageSlider = (props) => {
     setTheImg(imagesItems[3].id);
   };
 
+  const prevImage = () => {
+    setTheImg(theImg - 1);
+    if (theImg <= 1) {
+      setTheImg(1);
+    }
+  };
+
+  const nextImage = () => {
+    setTheImg(theImg + 1);
+    if (theImg >= 4) {
+      setTheImg(4);
+    }
+  };
   return (
     <div className={classes.imgComponent}>
       {imagesItems.map(({ id, key, smallImg, largeImg }) => {
@@ -65,6 +80,10 @@ const ImageSlider = (props) => {
           </React.Fragment>
         );
       })}
+      <div className={classes.arrow}>
+        <img className={classes.left} onClick={prevImage} src={left} alt="" />
+        <img className={classes.right} onClick={nextImage} src={right} alt="" />
+      </div>
       <div className={classes.smallImages}>
         <img src={ImgThumb1} onClick={chosenImage1} alt="" />
         <img src={ImgThumb2} onClick={chosenImage2} alt="" />

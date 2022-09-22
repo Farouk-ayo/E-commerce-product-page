@@ -5,11 +5,31 @@
   gap: 1.5rem;
   width: 45%;
 }
-
+@media (max-width: 65rem) {
+  .text {
+    gap: 0.1rem;
+  }
+}
+@media (max-width: 50rem) {
+  .text {
+    width: 100%;
+  }
+}
+@media (max-width: 34.75rem) {
+  .text {
+    width: 90%;
+    gap: 1rem;
+  }
+}
 .text h1 {
   font-size: 3rem;
   color: hsl(220, 13%, 13%);
   font-weight: 700;
+}
+@media (max-width: 28.15rem) {
+  .text h1 {
+    font-size: 2rem;
+  }
 }
 
 .oranged {

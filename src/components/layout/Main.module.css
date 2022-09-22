@@ -4,3 +4,63 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media (max-width: 71rem) {
+  .main {
+    padding: 2rem 0rem;
+  }
+}
+
+@media (max-width: 50rem) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+@media (max-width: 28.75rem) {
+  .main {
+    padding: 0rem;
+  }
+}
+
+.navbar {
+  position: fixed;
+  width: 60vw;
+  left: 0rem;
+  height: 100vh;
+  background-color: white;
+  z-index: 300;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.cross {
+  width: 1rem;
+  height: 1rem;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 105;
+  background-color: rgba(0, 0, 0, 0.504);
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navLink li a {
+  text-decoration: none;
+}
+.navLink li a {
+  font-weight: 700;
+  color: black;
+  font-size: 1rem;
+}

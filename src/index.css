@@ -15,3 +15,13 @@ body {
   background-color: hsl(0, 0%, 100%);
   padding: 0rem 8rem 0rem 8rem;
 }
+@media (max-width: 56.25rem) {
+  body {
+    padding: 0rem 4rem 0rem 4rem;
+  }
+}
+@media (max-width: 34.75rem) {
+  body {
+    padding: 0rem;
+  }
+}

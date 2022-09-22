@@ -9,11 +9,17 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+@media (max-width: 28.15rem) {
+  .amounts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .amount {
   display: flex;
   gap: 1rem;
   font-weight: 400;
-
   align-items: center;
 }
 
@@ -41,6 +47,11 @@
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 28.15rem) {
+  .btnComp {
+    flex-direction: column;
+  }
+}
 
 .btn {
   display: flex;
@@ -55,9 +66,21 @@
   font-size: 1.2rem;
   border-radius: 0.3rem;
 }
+@media (max-width: 65rem) {
+  .btn {
+    gap: 0.2rem;
+  }
+}
+@media (max-width: 28.15rem) {
+  .btn {
+    justify-content: space-between;
+  }
+}
+
 .minus {
   padding: 0rem 1.5rem;
 }
+
 .plus {
   padding: 0rem 1.5rem;
 }
@@ -74,11 +97,24 @@
   color: hsl(0, 0%, 100%);
   background-color: hsl(26, 100%, 55%);
   border: none;
-  padding: 0.2rem 3rem;
   border-radius: 0.3rem;
   width: 100%;
 }
-
+@media (max-width: 65rem) {
+  .cartBtn {
+    padding: 0.7rem 0.5rem;
+  }
+}
+@media (max-width: 50rem) {
+  .cartBtn {
+    width: 40%;
+  }
+}
+@media (max-width: 43.75rem) {
+  .cartBtn {
+    width: 100%;
+  }
+}
 .cartBtn:hover {
   background-color: hsla(26, 100%, 55%, 0.727);
 }

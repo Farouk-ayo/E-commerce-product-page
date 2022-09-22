@@ -1,9 +1,11 @@
 import ImageSlider from "./ImageSlider";
 import classes from "./Main.module.css";
 import MainText from "./MainText";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import React from "react";
 import cartContext from "../../stores/cartContext";
+import Header from "./Header";
+import cross from "./../../assets/images/icon-close.svg";
 
 const Main = (props) => {
   const headerText = "Fall Limited Edition Sneakers";
@@ -31,13 +33,56 @@ const Main = (props) => {
     cartctx.title = datas.headerText;
 
     cartctx.empty = "yes";
-    cartctx.spans = "yep";
 
     console.log(cartctx);
   };
 
+  const [nav, setState] = useState("no");
+  const setNav = () => {
+    setState("yes");
+  };
+  const backdropRemove = () => {
+    setState("no");
+  };
+
+  const sidebar = (
+    <section className={classes.navbar}>
+      <img
+        src={cross}
+        onClick={backdropRemove}
+        className={classes.cross}
+        alt=""
+      />
+      <ul className={classes.navLink}>
+        <li>
+          <a href="##">Collections</a>
+        </li>
+        <li>
+          <a href="##">Men</a>
+        </li>
+        <li>
+          <a href="##">Women</a>
+        </li>
+        <li>
+          <a href="##">About</a>
+        </li>
+        <li>
+          <a href="##">Contact</a>
+        </li>
+      </ul>
+    </section>
+  );
+
   return (
     <React.Fragment>
+      {nav === "yes" ? sidebar : null}
+      {nav === "yes" ? (
+        <section
+          className={classes.backdrop}
+          onClick={backdropRemove}
+        ></section>
+      ) : null}
+      <Header navbar={setNav} />
       <main className={classes.main}>
         <ImageSlider eachNumber={amt} />
         <MainText

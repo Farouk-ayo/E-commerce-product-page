@@ -25,17 +25,11 @@ const CartLabel = (props) => {
     openCarts(false);
   };
 
-  console.log(cartCtx.empty);
   return (
     <React.Fragment>
       <div className={classes.carts}>
         <div>
           <img src={cartImage} onClick={showForm} alt="cart" />
-          {cartCtx.spans ? (
-            <figcaption className={classes.fig}>{cartCtx.num}</figcaption>
-          ) : (
-            ""
-          )}
         </div>
 
         <img className={classes.img} src={avatar} alt="" />
