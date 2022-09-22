@@ -8,19 +8,19 @@ const Header = (props) => {
   const eachItems = (
     <ul className={classes.link}>
       <li>
-        <a href="##">Collections</a>
+        <a href="#id">Collections</a>
       </li>
       <li>
-        <a href="##">Men</a>
+        <a href="#id">Men</a>
       </li>
       <li>
-        <a href="##">Women</a>
+        <a href="#id">Women</a>
       </li>
       <li>
-        <a href="##">About</a>
+        <a href="#id">About</a>
       </li>
       <li>
-        <a href="##">Contact</a>
+        <a href="#id">Contact</a>
       </li>
     </ul>
   );
@@ -29,7 +29,12 @@ const Header = (props) => {
     <React.Fragment>
       <header className={classes.header}>
         <div className={classes.nav}>
-          <img src={menu} className={classes.menu} onClick={props.navbar} alt="" />
+          <img
+            src={menu}
+            className={classes.menu}
+            onClick={props.navbar}
+            alt=""
+          />
           <img src={logo} alt="" />
           {eachItems}
         </div>
