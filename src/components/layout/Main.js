@@ -50,6 +50,10 @@ const Main = (props) => {
     setState("no");
   };
 
+  const not = () => {
+    setNoti("no");
+  };
+
   const sidebar = (
     <section className={classes.navbar}>
       <img
@@ -87,7 +91,7 @@ const Main = (props) => {
           onClick={backdropRemove}
         ></section>
       ) : null}
-      <Header navbar={setNav} />
+      <Header navbar={setNav} oncartClosed={not} />
       <main className={classes.main}>
         <ImageSlider eachNumber={amt} />
         <MainText

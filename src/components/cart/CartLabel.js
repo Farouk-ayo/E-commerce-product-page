@@ -16,6 +16,7 @@ const CartLabel = (props) => {
     if (carts === true) {
       openCarts(false);
     }
+    props.oncartClosed();
   };
   const deleteCart = () => {
     cartCtx.empty = null;

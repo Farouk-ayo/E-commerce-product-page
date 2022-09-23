@@ -38,7 +38,7 @@ const Header = (props) => {
           <img src={logo} alt="" />
           {eachItems}
         </div>
-        <CartLabel />
+        <CartLabel oncartClosed={props.oncartClosed} />
       </header>
     </React.Fragment>
   );
