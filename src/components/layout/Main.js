@@ -12,6 +12,9 @@ const Main = (props) => {
 
   const cartctx = useContext(cartContext);
 
+  const [noti, setNoti] = useState("no");
+  const [numm, setNumm] = useState("");
+
   const datas = {
     price: "$125.00",
     priceAmount: 125.0,
@@ -23,7 +26,6 @@ const Main = (props) => {
     cartctx.id = key;
     console.log(img, key);
   };
-  
 
   const onAddtoCart = (number) => {
     cartctx.price = datas.price;
@@ -35,10 +37,11 @@ const Main = (props) => {
 
     cartctx.empty = "yes";
 
- 
+    setNoti("yes");
+    setNumm(cartctx.num);
     console.log(cartctx);
   };
-  console.log(cartctx);
+
   const [nav, setState] = useState("no");
   const setNav = () => {
     setState("yes");
@@ -95,6 +98,9 @@ const Main = (props) => {
           headerText={datas.headerText}
         />
       </main>
+      {noti === "yes" && numm > 0 ? (
+        <div className={classes.fig}>{numm}</div>
+      ) : null}
     </React.Fragment>
   );
 };
