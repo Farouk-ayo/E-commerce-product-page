@@ -4,7 +4,6 @@
   flex-direction: row;
   justify-content: space-between;
   z-index: 2;
-
 }
 
 @media (max-width: 71rem) {
@@ -77,6 +76,7 @@
   right: 12.5rem;
   margin-left: 0.5rem;
   padding: 0.1rem 0.5rem;
+  z-index: 800;
 }
 
 @media (max-width: 56.25rem) {
