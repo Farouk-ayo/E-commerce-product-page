@@ -62,7 +62,7 @@ const Main = (props) => {
         className={classes.cross}
         alt=""
       />
-      <ul className={classes.navLink}>
+      <ul className={classes.git}>
         <li>
           <a href="##">Collections</a>
         </li>
