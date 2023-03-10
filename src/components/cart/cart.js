@@ -29,6 +29,7 @@ const Cart = (props) => {
           totalPrice={cartCtx.totalPrice}
           onClicked={props.deleteCarts}
           onClosed={props.onClosed}
+          
         />
       )}
     </section>

@@ -70,16 +70,14 @@ const ImageSlider = (props) => {
   };
   return (
     <div className={classes.imgComponent}>
-      {imagesItems.map(({ id, key, smallImg, largeImg }) => {
-        return (
-          <React.Fragment>
-            {+theImg === +id ? props.eachNumber(smallImg, key) : null}
-            {+theImg === +id ? (
-              <img className={classes.big} src={largeImg} alt="" />
-            ) : null}
-          </React.Fragment>
-        );
-      })}
+      {imagesItems.map(({ id, key, smallImg, largeImg }) => (
+        <>
+          {+theImg === +id ? props.eachNumber(smallImg, key) : null}
+          {+theImg === +id ? (
+            <img className={classes.big} src={largeImg} alt="" />
+          ) : null}
+        </>
+      ))}
       <div className={classes.arrow}>
         <img className={classes.left} onClick={prevImage} src={left} alt="" />
         <img className={classes.right} onClick={nextImage} src={right} alt="" />
