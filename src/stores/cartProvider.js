@@ -1,7 +1,5 @@
 import cartContext from "./cartContext";
 
-
-
 const CartProvider = (props) => {
   return (
     <cartContext.Provider value={cartContext}>
